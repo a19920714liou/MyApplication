@@ -31,6 +31,7 @@ public class MainActivity extends Activity {
         list.add("ceshi");
         TextView textView = (TextView)findViewById(R.id.ceshiText);
         textView.setText(list.toString());
+
         textView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
