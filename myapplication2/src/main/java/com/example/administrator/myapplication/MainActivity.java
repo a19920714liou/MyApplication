@@ -2,16 +2,13 @@ package com.example.administrator.myapplication;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import org.w3c.dom.Text;
-
-import java.util.ArrayDeque;
 import java.util.ArrayList;
 
 
@@ -34,6 +31,12 @@ public class MainActivity extends Activity {
         list.add("ceshi");
         TextView textView = (TextView)findViewById(R.id.ceshiText);
         textView.setText(list.toString());
+        textView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                return false;
+            }
+        });
     }
 
 
